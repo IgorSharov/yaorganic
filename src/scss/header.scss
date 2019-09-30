@@ -1,0 +1,14 @@
+.ui {
+  &.vertical.segment.header-content {
+    background-color: $customBackgroundColor;
+    height: 30vh;
+  }
+
+  &.header {
+    color: $customFontColor;
+  }
+}
+
+.ya-prefix {
+  color: $customPrimaryColor;
+}

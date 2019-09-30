@@ -1,1 +1,10 @@
 @import "./scss/variables.scss";
+@import "./scss/header.scss";
+
+.pusher {
+  height: 100vh;
+}
+.ui.sidebar.vertical.menu {
+  color: $customDarkColor;
+  background-color: $customSecondaryColor;
+}

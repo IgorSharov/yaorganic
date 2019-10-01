@@ -1,10 +1,18 @@
 import React from "react";
 
-import { Segment, Icon, Header as HUi } from "semantic-ui-react";
+import {
+  Segment,
+  Container,
+  Icon,
+  Header as HUi,
+  Button
+} from "semantic-ui-react";
 
-interface Props {}
+interface Props {
+  clickSidebarMenu(): void;
+}
 
-export const Header: React.FC<Props> = () => {
+export const Header: React.FC<Props> = ({ clickSidebarMenu }) => {
   return (
     <Segment vertical className="header-content">
       <HUi as="h1" textAlign="center" icon>
@@ -12,6 +20,16 @@ export const Header: React.FC<Props> = () => {
         <span className="ya-prefix">ya</span>Organic
         <HUi.Subheader>Единый портал продуктов здорового питания</HUi.Subheader>
       </HUi>
+      <Container text>
+        <Button animated="vertical" onClick={clickSidebarMenu}>
+          <Button.Content visible>
+            <Icon name="list" />
+          </Button.Content>
+          <Button.Content hidden>
+            <Icon name="arrow left" />
+          </Button.Content>
+        </Button>
+      </Container>
     </Segment>
   );
 };

@@ -1,11 +1,16 @@
 .ui {
   &.vertical.segment.header-content {
     background-color: $customBackgroundColor;
-    height: 30vh;
+    min-height: 30vh;
   }
 
   &.header {
     color: $customFontColor;
+  }
+
+  &.button {
+    background-color: $customSecondaryColor;
+    color: $customDarkColor;
   }
 }
 

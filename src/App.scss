@@ -8,3 +8,7 @@
   color: $customDarkColor;
   background-color: $customSecondaryColor;
 }
+
+.ui.vertical.sidebar.menu > .item:first-child:before {
+  display: none !important;
+}

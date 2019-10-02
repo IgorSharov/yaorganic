@@ -11,7 +11,7 @@ interface State {
 }
 
 export default class App extends Component<Props, State> {
-  // state = { visible: true };
+  // state = { visible: true }; //TODO: clean up
   state = { visible: false };
 
   toggleVisible = () => this.setState(state => ({ visible: !state.visible }));

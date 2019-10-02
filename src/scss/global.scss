@@ -1,0 +1,12 @@
+.ui {
+  &.button {
+    background-color: $customSecondaryColor;
+    color: $customDarkColor;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $customSecondaryColor;
+    }
+  }
+}

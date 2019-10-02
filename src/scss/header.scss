@@ -7,15 +7,6 @@
   &.header {
     color: $customFontColor;
   }
-
-  &.button {
-    background-color: $customSecondaryColor;
-    color: $customDarkColor;
-
-    &.animated:hover {
-      background-color: $customSecondaryColor;
-    }
-  }
 }
 
 .ya-prefix {

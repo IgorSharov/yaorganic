@@ -1,0 +1,24 @@
+.ui {
+  &.menu {
+    & > .item > .button {
+      margin-top: 1em;
+      background-color: $customPrimaryColor;
+      color: $customDarkColor;
+
+      &.basic:active,
+      &.basic:hover,
+      &.basic:focus {
+        background-color: $customPrimaryColor !important;
+      }
+    }
+
+    .menu-button-close {
+      position: fixed;
+      right: -0.6em;
+    }
+
+    & > .item > img {
+      margin-top: 1.2em;
+    }
+  }
+}

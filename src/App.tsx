@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Header } from "./components/Header";
-import { Segment, Sidebar, Menu, Icon, Divider } from "semantic-ui-react";
+import { Segment, Sidebar, Menu, Icon, Image, Button } from "semantic-ui-react";
 // import logo from "./logo.svg";
 import "./App.scss";
 
@@ -31,6 +31,23 @@ export default class App extends Component<Props, State> {
           onHide={this.toggleVisible}
           width="wide"
         >
+          {/* <Button
+            onClick={this.toggleVisible}
+            size="big"
+            icon={{ name: "close", size: "large" }}
+            className="menu-button-close"
+          /> */}
+          <Menu.Item>
+            <Image
+              src="https://static.wixstatic.com/media/a4894d_bc50df6799ad42e9aba766682c827da3~mv2.png/v1/fill/w_427,h_427,al_c,q_80,usm_0.66_1.00_0.01/blank.webp"
+              size="small"
+              centered
+              circular
+            />
+            <Button basic size="big">
+              Войти
+            </Button>
+          </Menu.Item>
           <Menu.Item as="a">
             <Icon name="home" />
             Каталог

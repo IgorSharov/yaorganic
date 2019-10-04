@@ -1,16 +1,14 @@
-@import "./scss/variables.scss";
-@import "./scss/global.scss";
-@import "./scss/header.scss";
-@import "./scss/menu.scss";
+@import "components/variables.scss";
 
-.pusher {
-  height: 100vh;
-}
-.ui.sidebar.vertical.menu {
-  color: $customDarkColor;
-  background-color: $customSecondaryColor;
-}
+.ui {
+  &.button {
+    background-color: $customSecondaryColor;
+    color: $customDarkColor;
 
-.ui.vertical.sidebar.menu > .item:first-child:before {
-  display: none !important;
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $customSecondaryColor;
+    }
+  }
 }

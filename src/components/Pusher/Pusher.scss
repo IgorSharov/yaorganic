@@ -1,5 +1,18 @@
+@import "../variables.scss";
+
 .ui {
-  &.menu {
+  &.vertical.sidebar.menu {
+    color: $customDarkColor;
+    background-color: $customSecondaryColor;
+
+    & > .item:first-child:before {
+      display: none !important;
+    }
+
+    & > .item > img {
+      margin-top: 1.2em;
+    }
+
     & > .item > .button {
       margin-top: 1em;
       background-color: $customPrimaryColor;
@@ -14,12 +27,8 @@
 
     .menu-button-close {
       position: fixed;
-      right: -0.6em;
+      right: -0.2em;
       z-index: 1;
-    }
-
-    & > .item > img {
-      margin-top: 1.2em;
     }
   }
 }

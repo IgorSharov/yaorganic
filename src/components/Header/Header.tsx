@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Header.scss";
 import {
   Segment,
   Container,
@@ -9,10 +9,10 @@ import {
 } from "semantic-ui-react";
 
 interface Props {
-  clickSidebarMenu(): void;
+  sidebarToggleShow(): void;
 }
 
-export const Header: React.FC<Props> = ({ clickSidebarMenu }) => {
+const Header: React.FC<Props> = ({ sidebarToggleShow }) => {
   return (
     <Segment vertical className="header-content">
       <HUi as="h1" textAlign="center" icon>
@@ -21,7 +21,7 @@ export const Header: React.FC<Props> = ({ clickSidebarMenu }) => {
         <HUi.Subheader>Единый портал продуктов здорового питания</HUi.Subheader>
       </HUi>
       <Container text>
-        <Button animated="vertical" onClick={clickSidebarMenu}>
+        <Button animated="vertical" onClick={sidebarToggleShow}>
           <Button.Content visible>
             <Icon name="list" />
           </Button.Content>
@@ -33,3 +33,5 @@ export const Header: React.FC<Props> = ({ clickSidebarMenu }) => {
     </Segment>
   );
 };
+
+export default Header;

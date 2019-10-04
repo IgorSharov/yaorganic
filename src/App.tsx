@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import { Header } from "./components/Header";
 import { Segment, Sidebar, Menu, Icon, Image, Button } from "semantic-ui-react";
-// import logo from "./logo.svg";
 import "./App.scss";
 
 interface Props {}

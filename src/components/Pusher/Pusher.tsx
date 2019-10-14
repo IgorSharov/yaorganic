@@ -1,6 +1,16 @@
 import React, { ReactNode } from "react";
 import "./Pusher.scss";
-import { Segment, Sidebar, Menu, Icon, Image, Button } from "semantic-ui-react";
+import {
+  Button,
+  Divider,
+  Flag,
+  Icon,
+  Image,
+  Label,
+  Menu,
+  Segment,
+  Sidebar
+} from "semantic-ui-react";
 
 interface Props {
   sidebarVisible: boolean;
@@ -18,7 +28,6 @@ const Pusher: React.FC<Props> = ({
       as={Menu}
       className="secondary"
       animation="overlay"
-      icon="labeled"
       vertical
       visible={sidebarVisible}
       onHide={sidebarToggleHide}
@@ -27,10 +36,10 @@ const Pusher: React.FC<Props> = ({
       <Button
         onClick={sidebarToggleHide}
         size="big"
-        icon={{ name: "close", size: "large" }}
+        icon={{ name: "close", size: "small" }}
         className="menu-button-close"
       />
-      <Menu.Item>
+      <Menu.Item className="ui menu icon labeled">
         <Image
           src="https://static.wixstatic.com/media/a4894d_bc50df6799ad42e9aba766682c827da3~mv2.png/v1/fill/w_427,h_427,al_c,q_80,usm_0.66_1.00_0.01/blank.webp"
           size="small"
@@ -41,17 +50,49 @@ const Pusher: React.FC<Props> = ({
           Войти
         </Button>
       </Menu.Item>
+      <Divider />
       <Menu.Item as="a">
-        <Icon name="home" />
+        <Icon name="qrcode" />
         Каталог
       </Menu.Item>
       <Menu.Item as="a">
-        <Icon name="gamepad" />
-        Калькулятор калорий
+        <Icon name="chart line" />
+        Популярные товары
       </Menu.Item>
       <Menu.Item as="a">
         <Icon name="camera" />
         Рецепты
+      </Menu.Item>
+      <Menu.Item as="a">
+        <Icon name="th list" />
+        Программы питания
+      </Menu.Item>
+      <Divider />
+      <Menu.Item as="a">
+        <Icon name="vk" />
+        Группа ВКонтакте
+      </Menu.Item>
+      <Menu.Item as="a">
+        <Icon name="youtube" />
+        Youtube
+      </Menu.Item>
+      <Menu.Item as="a">
+        <Icon name="instagram" />
+        Instagram
+      </Menu.Item>
+      <Divider />
+      <Label as="a" className="item">
+        <Icon name="map marker alternate" />
+        Москва
+      </Label>
+      <Label as="a" className="item">
+        <Flag name="russia" />
+        Русский язык
+      </Label>
+      <Divider />
+      <Menu.Item as="a">
+        <Icon name="fork" />
+        Обратная связь
       </Menu.Item>
     </Sidebar>
 

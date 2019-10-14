@@ -9,6 +9,10 @@
       display: none !important;
     }
 
+    & > .item {
+      font-size: 1.2em;
+    }
+
     & > .item > img {
       margin-top: 1.2em;
     }
@@ -30,5 +34,9 @@
       right: -0.2em;
       z-index: 1;
     }
+  }
+
+  &.pushable > .pusher {
+    min-height: 100vh;
   }
 }

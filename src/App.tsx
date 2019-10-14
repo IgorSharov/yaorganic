@@ -9,8 +9,7 @@ interface State {
 }
 
 export default class App extends Component<Props, State> {
-  state = { sidebarVisible: true }; //TODO: clean up
-  // state = { sidebarVisible: false };
+  state = { sidebarVisible: false };
 
   sidebarToggleShow = () => this.setState({ sidebarVisible: true });
   sidebarToggleHide = () => this.setState({ sidebarVisible: false });
@@ -21,15 +20,6 @@ export default class App extends Component<Props, State> {
         sidebarVisible={this.state.sidebarVisible}
         sidebarToggleHide={this.sidebarToggleHide}
       >
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
         <Header sidebarToggleShow={this.sidebarToggleShow} />
       </Pusher>
     );

@@ -1,5 +1,11 @@
 import React, { Component } from "react";
+
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import * as routesHelpers from "routes/helpers";
+import routes from "routes";
+
 import "./App.scss";
+
 import Pusher from "components/Pusher";
 import Header from "components/Header";
 
@@ -16,12 +22,19 @@ export default class App extends Component<Props, State> {
 
   render() {
     return (
-      <Pusher
-        sidebarVisible={this.state.sidebarVisible}
-        sidebarToggleHide={this.sidebarToggleHide}
-      >
-        <Header sidebarToggleShow={this.sidebarToggleShow} />
-      </Pusher>
+      <Router>
+        <Pusher
+          sidebarVisible={this.state.sidebarVisible}
+          sidebarToggleHide={this.sidebarToggleHide}
+        >
+          <Header sidebarToggleShow={this.sidebarToggleShow} />
+          <Switch>
+            {routes.map((route, i) => (
+              <routesHelpers.RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </Switch>
+        </Pusher>
+      </Router>
     );
   }
 }

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import * as routesHelpers from "routes/helpers";
-import routes from "routes";
-
 import "./App.scss";
 
-import Pusher from "components/Pusher";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+
 import Header from "components/Header";
+import Pusher from "components/Pusher";
+import routes from "routes";
+import RouteWithSubRoutes from "helpers/RouteWithSubRoutes";
 
 interface Props {}
 interface State {
@@ -30,7 +29,7 @@ export default class App extends Component<Props, State> {
           <Header sidebarToggleShow={this.sidebarToggleShow} />
           <Switch>
             {routes.map((route, i) => (
-              <routesHelpers.RouteWithSubRoutes key={i} {...route} />
+              <RouteWithSubRoutes key={i} {...route} />
             ))}
           </Switch>
         </Pusher>

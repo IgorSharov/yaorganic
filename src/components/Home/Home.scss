@@ -1,0 +1,8 @@
+@import "../variables.scss";
+
+h3.ui.header {
+  color: $customDarkColor;
+  &:first-child {
+    margin-top: 0.4em;
+  }
+}

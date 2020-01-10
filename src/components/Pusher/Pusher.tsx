@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import "./Pusher.scss";
+
 import {
   Button,
   Divider,
@@ -11,17 +12,23 @@ import {
   Segment,
   Sidebar
 } from "semantic-ui-react";
+import RoleButton from "./RoleButton";
+import { userRoles } from "App";
 
 interface Props {
   sidebarVisible: boolean;
   sidebarToggleHide(): void;
   children: ReactNode;
+  userRole: userRoles;
+  setUserRole(role: string): void;
 }
 
 const Pusher: React.FC<Props> = ({
   sidebarVisible,
   sidebarToggleHide,
-  children
+  children,
+  userRole,
+  setUserRole
 }) => (
   <Sidebar.Pushable as={Segment}>
     <Sidebar
@@ -46,9 +53,7 @@ const Pusher: React.FC<Props> = ({
           centered
           circular
         />
-        <Button basic size="big">
-          Войти
-        </Button>
+        <RoleButton userRole={userRole} setUserRole={setUserRole} />
       </Menu.Item>
       <Divider />
       <Menu.Item as="a">

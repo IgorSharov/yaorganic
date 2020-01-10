@@ -8,16 +8,22 @@ import Pusher from "components/Pusher";
 import routes from "routes";
 import RouteWithSubRoutes from "helpers/RouteWithSubRoutes";
 
-interface Props {}
+export type userRoles = "admin" | "shop" | "user";
+
 interface State {
   sidebarVisible: boolean;
+  userRole: userRoles;
 }
 
-export default class App extends Component<Props, State> {
-  state = { sidebarVisible: false };
+export default class App extends Component<{}, State> {
+  state: State = { sidebarVisible: true, userRole: "admin" };
 
   sidebarToggleShow = () => this.setState({ sidebarVisible: true });
   sidebarToggleHide = () => this.setState({ sidebarVisible: false });
+
+  setUserRole = (role: userRoles) => {
+    this.setState({ userRole: role });
+  };
 
   render() {
     return (
@@ -25,6 +31,8 @@ export default class App extends Component<Props, State> {
         <Pusher
           sidebarVisible={this.state.sidebarVisible}
           sidebarToggleHide={this.sidebarToggleHide}
+          userRole={this.state.userRole}
+          setUserRole={this.setUserRole}
         >
           <Header sidebarToggleShow={this.sidebarToggleShow} />
           <Switch>

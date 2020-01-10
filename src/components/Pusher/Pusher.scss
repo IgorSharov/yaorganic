@@ -17,14 +17,11 @@
       margin-top: 1.2em;
     }
 
-    & > .item > .button {
-      margin-top: 1em;
-      background-color: $customPrimaryColor;
-      color: $customDarkColor;
+    & > .item > .buttons {
+      position: relative;
+      margin-top: 1rem;
 
-      &.basic:active,
-      &.basic:hover,
-      &.basic:focus {
+      & > .button:hover {
         background-color: $customPrimaryColor !important;
       }
     }

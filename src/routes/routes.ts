@@ -1,5 +1,6 @@
 import Home from "components/Home";
 import Form from "components/Form";
+import CalorieCalculator from "components/CalorieCalculator";
 
 export default [
   {
@@ -13,6 +14,6 @@ export default [
   },
   {
     path: "/calc",
-    component: Home
+    component: CalorieCalculator
   }
 ];

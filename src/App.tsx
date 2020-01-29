@@ -17,7 +17,7 @@ interface State {
 }
 
 export default class App extends Component<{}, State> {
-  state: State = { sidebarVisible: true, userRole: "none" };
+  state: State = { sidebarVisible: false, userRole: "none" };
 
   sidebarToggleShow = () => this.setState({ sidebarVisible: true });
   sidebarToggleHide = () => this.setState({ sidebarVisible: false });
@@ -36,7 +36,7 @@ export default class App extends Component<{}, State> {
           setUserRole={this.setUserRole}
         >
           <Header sidebarToggleShow={this.sidebarToggleShow} />
-          <Container>
+          <Container className="body-content">
             <Switch>
               {routes.map((route, i) => (
                 <RouteWithSubRoutes key={i} {...route} />

@@ -11,4 +11,7 @@
       background-color: $customSecondaryColor;
     }
   }
+  &.body-content {
+    min-height: 150vh;
+  }
 }

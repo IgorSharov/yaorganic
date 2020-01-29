@@ -37,6 +37,14 @@ const RoleButton: React.FC<Props> = ({ userRole, setUserRole }) => {
         >
           User
         </Button>
+        <Button
+          active={userRole === "none"}
+          onClick={() => {
+            setUserRole("none");
+          }}
+        >
+          none
+        </Button>
       </Button.Group>
     </React.Fragment>
   );

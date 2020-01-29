@@ -12,8 +12,11 @@ import {
   Segment,
   Sidebar
 } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+
 import RoleButton from "./RoleButton";
 import { userRoles } from "App";
+import menuItems from "./menu_items.json";
 
 interface Props {
   sidebarVisible: boolean;
@@ -56,22 +59,12 @@ const Pusher: React.FC<Props> = ({
         <RoleButton userRole={userRole} setUserRole={setUserRole} />
       </Menu.Item>
       <Divider />
-      <Menu.Item as="a">
-        <Icon name="qrcode" />
-        Каталог
-      </Menu.Item>
-      <Menu.Item as="a">
-        <Icon name="chart line" />
-        Популярные товары
-      </Menu.Item>
-      <Menu.Item as="a">
-        <Icon name="camera" />
-        Рецепты
-      </Menu.Item>
-      <Menu.Item as="a">
-        <Icon name="th list" />
-        Программы питания
-      </Menu.Item>
+      {menuItems[userRole].map((element, i) => (
+        <Menu.Item key={i} as={Link} to={element.link}>
+          <Icon name="arrow right" />
+          {element.name}
+        </Menu.Item>
+      ))}
       <Divider />
       <Menu.Item as="a">
         <Icon name="vk" />

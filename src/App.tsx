@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import "./App.scss";
 
 import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { Container } from "semantic-ui-react";
 
 import Header from "components/Header";
 import Pusher from "components/Pusher";
 import routes from "routes";
 import RouteWithSubRoutes from "helpers/RouteWithSubRoutes";
 
-export type userRoles = "admin" | "shop" | "user";
+export type userRoles = "admin" | "shop" | "user" | "none";
 
 interface State {
   sidebarVisible: boolean;
@@ -16,7 +17,7 @@ interface State {
 }
 
 export default class App extends Component<{}, State> {
-  state: State = { sidebarVisible: true, userRole: "admin" };
+  state: State = { sidebarVisible: true, userRole: "none" };
 
   sidebarToggleShow = () => this.setState({ sidebarVisible: true });
   sidebarToggleHide = () => this.setState({ sidebarVisible: false });
@@ -35,11 +36,13 @@ export default class App extends Component<{}, State> {
           setUserRole={this.setUserRole}
         >
           <Header sidebarToggleShow={this.sidebarToggleShow} />
-          <Switch>
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
-          </Switch>
+          <Container>
+            <Switch>
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
+            </Switch>
+          </Container>
         </Pusher>
       </Router>
     );

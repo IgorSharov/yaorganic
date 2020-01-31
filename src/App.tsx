@@ -28,7 +28,7 @@ export default class App extends Component<{}, State> {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Pusher
           sidebarVisible={this.state.sidebarVisible}
           sidebarToggleHide={this.sidebarToggleHide}

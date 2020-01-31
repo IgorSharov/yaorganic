@@ -194,6 +194,7 @@ export default function CalorieCalculator(): ReactElement {
               >
                 <Icon name="add" /> Добавить
               </Button>
+              <div className="clear-float" />
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>

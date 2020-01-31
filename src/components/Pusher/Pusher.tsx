@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 import RoleButton from "./RoleButton";
 import { userRoles } from "App";
-import menuItems from "./menu_items.json";
+import menuItems from "helpers/menu_items.json";
 
 interface Props {
   sidebarVisible: boolean;

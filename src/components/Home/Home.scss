@@ -6,3 +6,15 @@ h3.ui.header {
     margin-top: 0.4em;
   }
 }
+
+.ui.container.main-advertisement {
+  height: 250px;
+  background-color: $customPrimaryColor;
+}
+
+.main-advertisement-text {
+  height: 100%;
+  text-align: center;
+  line-height: 250px;
+  color: $customFontColor;
+}

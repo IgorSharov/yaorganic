@@ -4,6 +4,7 @@ import {
   Segment,
   Container,
   Icon,
+  Input,
   Header as HUi,
   Button
 } from "semantic-ui-react";
@@ -28,6 +29,11 @@ const Header: React.FC<Props> = ({ sidebarToggleShow }) => (
           <Icon name="arrow left" />
         </Button.Content>
       </Button>
+      <Input
+        action={{ icon: "search" }}
+        placeholder="Поиск..."
+        className="header-search"
+      />
     </Container>
   </Segment>
 );

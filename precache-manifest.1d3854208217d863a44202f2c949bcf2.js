@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aff843c80517db80d16e82369d2f3699",
+    "revision": "e4c6854e3c0044c2a89d3f2aa90c3e78",
     "url": "/yaorganic/index.html"
   },
   {
-    "revision": "0241db1cd667d7c3e676",
+    "revision": "1b87927629c241bc56ca",
     "url": "/yaorganic/static/css/2.5e304c62.chunk.css"
   },
   {
-    "revision": "e62115cf5bcd10e0d344",
-    "url": "/yaorganic/static/css/main.3a5ade57.chunk.css"
+    "revision": "c18983b94c9948457063",
+    "url": "/yaorganic/static/css/main.e4997f8e.chunk.css"
   },
   {
-    "revision": "0241db1cd667d7c3e676",
-    "url": "/yaorganic/static/js/2.930e9977.chunk.js"
+    "revision": "1b87927629c241bc56ca",
+    "url": "/yaorganic/static/js/2.1d95a13e.chunk.js"
   },
   {
     "revision": "53e212d0cdcf90b86edf63f5b94320d5",
-    "url": "/yaorganic/static/js/2.930e9977.chunk.js.LICENSE"
+    "url": "/yaorganic/static/js/2.1d95a13e.chunk.js.LICENSE"
   },
   {
-    "revision": "e62115cf5bcd10e0d344",
-    "url": "/yaorganic/static/js/main.0b9c4612.chunk.js"
+    "revision": "c18983b94c9948457063",
+    "url": "/yaorganic/static/js/main.baffbc6a.chunk.js"
   },
   {
     "revision": "63ef4cc37216153116f0",
